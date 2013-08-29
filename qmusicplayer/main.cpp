@@ -39,20 +39,20 @@
 ****************************************************************************/
 #include <QtGui>
 
-#include "mainwindow.h"
+#include "disqteca.h"
 
 //![1]
 int main(int argv, char **args)
 {
     QApplication app(argv, args);
-    app.setApplicationName("Music Player");
+    app.setApplicationName("disqteca");
     app.setQuitOnLastWindowClosed(true);
 
-    MainWindow window;
+    disqteca janela;
 #if defined(Q_OS_SYMBIAN)
-    window.showMaximized();
+    janela.showMaximized();
 #else
-    window.show();
+    janela.show();
 #endif
 
     return app.exec(); 

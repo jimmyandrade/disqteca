@@ -349,6 +349,6 @@ void MainWindow::setupUi()
     widget->setLayout(mainLayout);
 
     setCentralWidget(widget);
-    setWindowTitle("Phonon Music Player");
+    setWindowTitle("disqteca");
 }
 

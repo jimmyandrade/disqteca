@@ -1,8 +1,10 @@
 QT        += phonon
 
-HEADERS   += mainwindow.h
+HEADERS   += mainwindow.h \
+    disqteca.h
 SOURCES   += main.cpp \
-             mainwindow.cpp
+             mainwindow.cpp \
+    disqteca.cpp
 
 # install
 target.path = $$[QT_INSTALL_EXAMPLES]/phonon/qmusicplayer
@@ -22,3 +24,6 @@ symbian {
 maemo5: include($$QT_SOURCE_TREE/examples/maemo5pkgrules.pri)
 symbian: warning(This example might not fully work on Symbian platform)
 simulator: warning(This example might not fully work on Simulator platform)
+
+FORMS += \
+    disqteca.ui
