@@ -1,0 +1,50 @@
+<!DOCTYPE QPH>
+<QPH sourcelanguage="en" language="pt_BR">
+<phrase>
+    <source>Title</source>
+    <target>Título</target>
+    <definition>Media name.</definition>
+</phrase>
+<phrase>
+    <source>Artist</source>
+    <target>Artista</target>
+    <definition>Artist/band name.</definition>
+</phrase>
+<phrase>
+    <source>Disq</source>
+    <target>Disco</target>
+    <definition>Album name, with a touch of Qt.</definition>
+</phrase>
+<phrase>
+    <source>Year</source>
+    <target>Ano</target>
+    <definition>Media year.</definition>
+</phrase>
+<phrase>
+    <source>about disqteca</source>
+    <target>sobre o disqteca</target>
+    <definition>About disqteca dialog titke.</definition>
+</phrase>
+<phrase>
+    <source>disqteca, a player developed by</source>
+    <target>disqteca, um player desenvolvido por</target>
+    <definition>A bit of about text on disqteca about dialog</definition>
+</phrase>
+<phrase>
+    <source>for the Computer Aided Projects course work #1</source>
+    <target>para o TP1 da disciplina de Projeto Assistido por Computador</target>
+</phrase>
+<phrase>
+    <source>Staff</source>
+    <target>Equipe</target>
+    <definition>Staff title for about disqteca dialog</definition>
+</phrase>
+<phrase>
+    <source>about qt</source>
+    <target>sobre o qt</target>
+</phrase>
+<phrase>
+    <source>choose music and video files</source>
+    <target>escolha os arquivos de música e vídeo</target>
+</phrase>
+</QPH>

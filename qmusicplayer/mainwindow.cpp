@@ -93,12 +93,7 @@ void MainWindow::addFiles()
 }
 //![6]
 
-void MainWindow::about()
-{
-    QMessageBox::information(this, tr("About Music Player"),
-        tr("The Music Player example shows how to use Phonon - the multimedia"
-           " framework that comes with Qt - to create a simple music player."));
-}
+
 
 //![9]
 void MainWindow::stateChanged(Phonon::State newState, Phonon::State /* oldState */)

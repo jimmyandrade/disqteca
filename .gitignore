@@ -1,3 +1,9 @@
+build-qmusicplayer-Desktop-Debug/
+build-qmusicplayer-Desktop-Release/
+.Debug
+.Release
+Makefile
+
 #################
 ## Eclipse
 #################

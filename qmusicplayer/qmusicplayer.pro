@@ -27,3 +27,8 @@ simulator: warning(This example might not fully work on Simulator platform)
 
 FORMS += \
     disqteca.ui
+
+OTHER_FILES +=
+
+RESOURCES += \
+    resources.qrc

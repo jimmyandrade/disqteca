@@ -6,55 +6,473 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>431</width>
+    <width>640</width>
     <height>480</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>320</width>
+    <width>640</width>
     <height>480</height>
    </size>
   </property>
-  <property name="maximumSize">
+  <property name="sizeIncrement">
    <size>
-    <width>1024</width>
-    <height>768</height>
+    <width>24</width>
+    <height>24</height>
    </size>
   </property>
   <property name="font">
    <font>
-    <family>Helvetica-Light</family>
-    <pointsize>11</pointsize>
+    <family>Helvetica Neue</family>
+    <pointsize>12</pointsize>
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>disqteca</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/disqteca/resources/icon.ico</normaloff>:/disqteca/resources/icon.ico</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
    <string notr="true">* {
 background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(255, 147, 0), stop: 1 rgb(242, 44, 103));
+font-family: &quot;Helvetica Neue&quot;; font-size: 12pt;
 }</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="Mixteca">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>90</y>
+      <width>300</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>300</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>600</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <property name="columnCount">
+     <number>4</number>
+    </property>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+   <widget class="QWidget" name="controlesWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>310</y>
+      <width>600</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>600</width>
+      <height>36</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>48</height>
+     </size>
+    </property>
+    <layout class="QHBoxLayout" name="controlesHL">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="previousButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/disqteca/resources/icons/dark/appbar.control.rewind.png</normaloff>:/disqteca/resources/icons/dark/appbar.control.rewind.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="playToolbarButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/disqteca/resources/icons/dark/appbar.control.play.png</normaloff>:/disqteca/resources/icons/dark/appbar.control.play.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>36</width>
+           <height>36</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="nextButton">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/disqteca/resources/icons/dark/appbar.control.fastforward.png</normaloff>:/disqteca/resources/icons/dark/appbar.control.fastforward.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Phonon::VolumeSlider" name="volumeSlider">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>600</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item>
+        <widget class="QLabel" name="andamento">
+         <property name="text">
+          <string>00:00</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Phonon::SeekSlider" name="seekSlider">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>431</width>
-     <height>25</height>
+     <width>640</width>
+     <height>26</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Helvetica-Light</family>
-     <pointsize>11</pointsize>
+     <family>Helvetica Neue</family>
+     <pointsize>12</pointsize>
     </font>
    </property>
+   <widget class="QMenu" name="menuPlayer">
+    <property name="title">
+     <string>&amp;disqteca</string>
+    </property>
+    <addaction name="action_abrir"/>
+    <addaction name="separator"/>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="separator"/>
+    <addaction name="telaCheiaAction"/>
+    <addaction name="sairAction"/>
+   </widget>
+   <widget class="QMenu" name="menuPlayer_2">
+    <property name="title">
+     <string>&amp;player</string>
+    </property>
+    <addaction name="playAction"/>
+    <addaction name="stopAction"/>
+    <addaction name="separator"/>
+    <addaction name="rewindAction"/>
+    <addaction name="previousAction"/>
+    <addaction name="nextAction"/>
+    <addaction name="forwardAction"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>&amp;?</string>
+    </property>
+    <addaction name="helpAction"/>
+    <addaction name="actionSobre_o_disqteca"/>
+    <addaction name="actionSobre_o_qt"/>
+   </widget>
+   <addaction name="menuPlayer"/>
+   <addaction name="menuPlayer_2"/>
+   <addaction name="menu"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_abrir">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.music.png</normaloff>:/disqteca/resources/icons/light/appbar.music.png</iconset>
+   </property>
+   <property name="text">
+    <string>a&amp;dicionar mídia à mixteca...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.disk.png</normaloff>:/disqteca/resources/icons/light/appbar.disk.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;salvar mixteca</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="sairAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.close.png</normaloff>:/disqteca/resources/icons/light/appbar.close.png</iconset>
+   </property>
+   <property name="text">
+    <string>sair</string>
+   </property>
+  </action>
+  <action name="playAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.control.play.png</normaloff>
+     <normalon>resources/icons/light/appbar.control.pause.png</normalon>:/disqteca/resources/icons/light/appbar.control.play.png</iconset>
+   </property>
+   <property name="text">
+    <string>re&amp;produzir/&amp;pausar</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="actionSobre_o_disqteca">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/disqteca/icone.ico</normaloff>:/disqteca/icone.ico</iconset>
+   </property>
+   <property name="text">
+    <string>sobre o &amp;disqteca</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F1</string>
+   </property>
+  </action>
+  <action name="actionSobre_o_qt">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.information.circle.png</normaloff>:/disqteca/resources/icons/light/appbar.information.circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>sobre o &amp;qt</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F1</string>
+   </property>
+  </action>
+  <action name="stopAction">
+   <property name="text">
+    <string>pa&amp;rar</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="previousAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.control.rewind.png</normaloff>:/disqteca/resources/icons/light/appbar.control.rewind.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;anterior</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="nextAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.control.fastforward.png</normaloff>:/disqteca/resources/icons/light/appbar.control.fastforward.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;próxima mídia</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="rewindAction">
+   <property name="text">
+    <string>re&amp;bobinar</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Left</string>
+   </property>
+  </action>
+  <action name="forwardAction">
+   <property name="text">
+    <string>a&amp;vançar</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Right</string>
+   </property>
+  </action>
+  <action name="telaCheiaAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;tela cheia</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionAumentar_volume">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.sound.3.png</normaloff>:/disqteca/resources/icons/light/appbar.sound.3.png</iconset>
+   </property>
+   <property name="text">
+    <string>aumentar volume</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="actionDiminuir_volume">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.sound.1.png</normaloff>:/disqteca/resources/icons/light/appbar.sound.1.png</iconset>
+   </property>
+   <property name="text">
+    <string>diminuir volume</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="actionMudo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.sound.mute.png</normaloff>:/disqteca/resources/icons/light/appbar.sound.mute.png</iconset>
+   </property>
+   <property name="text">
+    <string>mudo</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/disqteca/resources/icons/light/appbar.page.music.png</normaloff>:/disqteca/resources/icons/light/appbar.page.music.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;abrir mixteca</string>
+   </property>
+  </action>
+  <action name="helpAction">
+   <property name="text">
+    <string>&amp;como usar</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::SeekSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/seekslider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Phonon::VolumeSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/volumeslider.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

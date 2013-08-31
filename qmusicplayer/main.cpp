@@ -45,15 +45,39 @@
 int main(int argv, char **args)
 {
     QApplication app(argv, args);
+    QPixmap pixmap(":/disqteca/resources/splash.png");
+    QSplashScreen splash(pixmap);
+    splash.show();
+    splash.showMessage(QObject::tr("Initiating your program now..."), Qt::AlignLeft | Qt::AlignTop, Qt::black);
+
     app.setApplicationName("disqteca");
     app.setQuitOnLastWindowClosed(true);
 
     disqteca janela;
+
+    QPropertyAnimation splashanimation(&splash, "windowOpacity");
+    splashanimation.setDuration(5000);
+    splashanimation.setStartValue(1.0);
+    splashanimation.setEndValue(0.0);
+
+    splashanimation.start();
+
+    QPropertyAnimation animation(&janela, "windowOpacity");
+    animation.setDuration(500);
+    animation.setStartValue(0.0);
+    animation.setEndValue(1.0);
+
+    animation.start();
+
+
 #if defined(Q_OS_SYMBIAN)
     janela.showMaximized();
 #else
     janela.show();
 #endif
+
+    splash.finish(&janela);
+    splash.raise();
 
     return app.exec(); 
 }
